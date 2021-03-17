@@ -1,0 +1,254 @@
+@font-face {
+font-family: "Raleway";
+src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+font-family: "Raleway-semibold";
+src: url("../fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+font-family: "Raleway-bold";
+src: url("../fonts/Raleway-Bold.ttf");
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+*{
+    scroll-behavior: smooth;
+
+}
+body{
+    margin: 0;
+    font-family: "Raleway";
+    overflow-x: hidden;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 59%, rgba(0,0,0,0.531827696899072) 100%);
+}
+.paddingFluid{
+    padding: 0 4%;
+}
+.padUp{
+    padding-top: 3rem;
+}
+.padUpX{
+    padding-top: 6rem;
+}
+.padDown{
+    padding-bottom: 3rem;
+}
+.padDownX{
+    padding-bottom: 6rem;
+}
+
+.darkerMain{
+    margin: 0;
+    background-color: rgb(210, 217, 228);
+}
+
+.blackBG{
+    background: #1b242f;
+}
+
+
+
+
+
+.mainView{
+    background: linear-gradient(-45deg, #1b242f, #304257, #1b242f, #1b242f);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    height : calc(100vh + 53px);
+    overflow: hidden;
+}
+.mainText{
+    text-align: center;
+    padding-top: 30vh;
+}
+.mainHello{
+    color: white;
+    font-family: "Raleway-SemiBold";
+
+}
+.mainName{
+    color: red;
+    font-family: "Raleway-Bold";
+}
+.mainCareer{
+    color: rgb(190, 190, 190);
+
+}
+
+
+
+
+.mainNav{
+    background :#1b242f;
+    border-bottom: 3px solid #04c2c9;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: .8rem;
+}
+.navHead{
+
+    text-decoration: none;
+    color: white;
+    padding: 0  2rem;
+
+}
+.navHead:hover {
+    color:red;
+}
+
+
+
+.subHead{
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 5px;
+    font-family: "Raleway-Bold";
+}
+
+
+
+
+
+
+
+.abtFeaturesCard{
+    border: 0; 
+}
+.abtFeaturesImage{
+    width: 40%; 
+}
+.abtFeaturesHead{
+    font-family: "Raleway-Bold";
+    color: lightslategray;
+}
+.abtFeaturesContent{
+    color: lightslategray;
+    font-family: "Raleway-SemiBold";
+}
+
+
+.abtProfile{
+    width: 40%;
+}
+.profileLinkContact{
+    text-decoration: none;
+    color: teal;
+    font-family: "Raleway-SemiBold";
+}
+
+
+.progressPercent{
+    font-family: "Raleway-SemiBold";
+    background-color: #04c2c9;
+
+}
+.progressName{
+    font-family: "Raleway-SemiBold";
+    padding-left: 10px;
+    background-color: teal;
+}
+
+
+.serviceCard{
+    border: 0;
+    border-radius: 5%;
+    width:80%;
+}
+.serviceImage{
+    border-radius: 5% 5% 0 0;
+}
+
+
+.subHeadWhite{
+    color: white;    
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 5px;
+    font-family: "Raleway-Bold";
+
+}
+.contactWork{
+    color: teal; 
+}
+
+.contactFormItem{
+    margin-top: 10px;
+    background: #121920;
+    color: whitesmoke;
+}
+.contactFormButton,.contactFormButton:focus{
+    padding: 15px;
+    vertical-align: middle;
+    background: #1b242f;
+    border: #fff solid 2px;
+    color: white;
+    width: 100%;
+
+}
+.contactFormButton:hover{
+    background: white ;
+    border: #1b242f solid 2px;
+    color: #1b242f;
+    font-family: "Raleway-Bold";
+
+}
+.footerLast{
+    text-align: center;
+    justify-content: center;
+    padding: 5vh 0 5vh 0;
+    background: #121920;
+    color: #fff;
+}
+.footerItem{
+    font-size: large;
+    text-decoration: none;
+    padding: 0 1rem 1rem 1rem;
+    color: floralwhite;
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    .abtProfile{
+        width: 80%;
+    }
+
+  }
+
+
+
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    width: 2rem;
+    height: 2rem;
+    z-index: 99; 
+    border:teal solid .3rem;
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 100%;
+  }
+  
+  #myBtn:hover {
+    border:black solid .3rem;
+  }
