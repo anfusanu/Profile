@@ -244,11 +244,14 @@ body{
     height: 2rem;
     z-index: 99; 
     border:teal solid .3rem;
+    opacity: .3 ;
     cursor: pointer; 
     padding: 15px; 
     border-radius: 100%;
   }
   
   #myBtn:hover {
-    border:black solid .3rem;
+    border: teal solid .3rem;
+    opacity: 1 ;
+
   }
