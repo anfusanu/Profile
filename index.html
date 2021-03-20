@@ -16,7 +16,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
 
-   
+
 
 </head>
 
@@ -252,7 +252,7 @@
 
                 <div class="col-md-4 padDown">
                     <div class="card mx-auto serviceCard shadow-lg">
-                        <img src="assets/images/AdSense.jpg" class="card-img-top mx-auto serviceImage" alt="...">
+                        <img src="assets/images/UIDes.jpg" class="card-img-top mx-auto serviceImage" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">AdSense</h5>
                             <p class="card-text ">Earn money by placing ads on your website.</p>
@@ -293,18 +293,61 @@
     <div class="row blackBG">
         <div class="container-fluid paddingFluid">
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center blackBG">
                 <div class="col-md-4 contactForm">
-                    <form>
+                    <!-- FORM Starts here -->
+
+                    <form id="gform" name="gform" method="POST" action="">
                         <div class="form-group">
-                            <input type="text" class="form-control contactFormItem" placeholder="Enter name">
-                            <input type="email" class="form-control contactFormItem" placeholder="Enter email">
-                            <textarea class="form-control contactFormItem" placeholder="Your Message"
-                                rows="5"></textarea>
-                            <button class="contactFormItem contactFormButton">SUBMIT</button>
+
+                            <input type="text" class="form-control contactFormItem" placeholder="Enter name" name="name"
+                                id="name" required minlength="4" pattern="[a-zA-Z\s]*"
+                                onblur="nameValid();">
+
+                            <span id="nameReq" class="formValid">Field
+                                Required</span>
+                            <span id="nameErr" class="formValid">Only letters are
+                                allowed</span>
+                            <span id="nameLen" class="formValid">Minimum 4
+                                characters
+                                required</span>
+
+                            <input type="email" class="form-control contactFormItem" placeholder="Enter email"
+                                name="email" id="email" required onblur="emailValid();">
+
+                            <span id="emailReq" class="formValid">Field
+                                Required</span>
+                            <span id="emailErr" class="formValid">Invalid
+                                email</span>
+
+
+                            <input type="text" class="form-control contactFormItem" placeholder="Enter subject"
+                                name="subject" id="subject" required minlength="10" onblur="subjectValid();">
+
+
+                            <span id="subReq" class="formValid">Field
+                                Required</span>
+                            <span id="subLen" class="formValid">Minimum 10
+                                characters
+                                required</span>
+
+
+                            <textarea class="form-control contactFormItem" placeholder="Your Message" name="message"
+                             id="message" rows="5" required minlength="20"
+                                onblur="messageValid();"></textarea>
+
+                            <span id="msgReq" class="formValid">Field
+                                Required</span>
+                            <span id="msgLen" class="formValid">Minimum 20
+                                characters
+                                required</span>
+
+                            <button id="btn" class="contactFormItem contactFormButton"
+                                onclick="messageValid();emailValid();nameValid();subjectValid();">SUBMIT</button>
 
                         </div>
                     </form>
+                    <!-- FORM END HERE -->
 
                 </div>
             </div>
@@ -320,19 +363,20 @@
             <div class="col-xl-12">
                 <ul class="nav justify-content-center">
                     <li class="nav-item footerItem">
-                        <a href="https://www.facebook.com/Anfusanu/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/Anfusanu/" target="_blank"><i class="fa fa-facebook"></i></a>
                     </li>
                     <li class="nav-item footerItem">
-                        <a href="https://www.instagram.com/anfusanu/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/anfusanu/" target="_blank"><i
+                                class="fa fa-instagram"></i></a>
                     </li>
                     <li class="nav-item footerItem">
-                        <a href="https://www.linkedin.com/in/anfus/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/anfus/" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </li>
                     <li class="nav-item footerItem">
-                        <a href="https://github.com/anfusanu"><i class="fa fa-github"></i></a>
+                        <a href="https://github.com/anfusanu" target="_blank"><i class="fa fa-github"></i></a>
                     </li>
                     <li class="nav-item footerItem">
-                        <a href="https://twitter.com/anfusanu"><i class="fa fa-twitter"></i></a>
+                        <a href="https://twitter.com/anfusanu" target="_blank"><i class="fa fa-twitter"></i></a>
                     </li>
                 </ul>
             </div>
@@ -342,11 +386,13 @@
             </div>
         </div>
     </div>
-        <!-- End Footer -->
+    <!-- End Footer -->
 
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 </body>
+
+
 <script>
     mybutton = document.getElementById("myBtn");
 
@@ -364,9 +410,125 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 </script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/popper.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/additional-methods.js"></script>
+<script>
+    $("#gform").submit((e) => {
+        e.preventDefault()
+        $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbySeW2XNhMSU9TASLz1cYIRsIYHaBdWWAEfxxSML4QkXxGNYXCimi-9VuD0mo-iF6ZA/exec",
+            data: $("#gform").serialize(),
+            method: "post",
+            success: function (response) {
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error: function (err) {
+                alert("Something Error")
+
+            }
+        })
+    })
+
+</script>
+
+<script>
+
+
+    function nameValid() {
+        var text = document.getElementById("name").value;
+        var letters = /^[a-zA-Z\s]*$/;
+
+        if (text == "") {
+            document.getElementById("nameReq").style.display = "block";
+            document.getElementById("nameLen").style.display = "none";
+            document.getElementById("nameErr").style.display = "none";
+        } else if (!text.match(letters)) {
+            document.getElementById("nameErr").style.display = "block";
+            document.getElementById("nameReq").style.display = "none";
+            document.getElementById("nameLen").style.display = "none";
+
+        }
+        else if (text.length < 5) {
+            document.getElementById("nameLen").style.display = "block";
+            document.getElementById("nameReq").style.display = "none";
+            document.getElementById("nameErr").style.display = "none";
+        }
+        else {
+            document.getElementById("nameReq").style.display = "none";
+            document.getElementById("nameLen").style.display = "none";
+            document.getElementById("nameErr").style.display = "none";
+
+        }
+    }
+    function emailValid() {
+        var text = document.getElementById("email").value;
+        var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        if (text == "") {
+            document.getElementById("emailReq").style.display = "block";
+            document.getElementById("emailErr").style.display = "none";
+        } else if (!text.match(regx)) {
+            document.getElementById("emailErr").style.display = "block";
+            document.getElementById("emailReq").style.display = "none";
+        } else {
+            document.getElementById("emailReq").style.display = "none";
+            document.getElementById("emailErr").style.display = "none";
+
+        }
+    }
+
+    function subjectValid() {
+        var text = document.getElementById("subject").value;
+
+        if (text == "") {
+            document.getElementById("subReq").style.display = "block";
+            document.getElementById("subLen").style.display = "none";
+        }
+        else if (text.length < 10) {
+            document.getElementById("subLen").style.display = "block";
+            document.getElementById("subReq").style.display = "none";
+        }
+        else {
+            document.getElementById("subReq").style.display = "none";
+            document.getElementById("subLen").style.display = "none";
+
+        }
+    }
+
+    function messageValid() {
+
+        var text = document.getElementById("message").value;
+        if (text == "") {
+            document.getElementById("msgReq").style.display = "block";
+            document.getElementById("msgLen").style.display = "none";
+        }
+        else if (text.length < 20) {
+            document.getElementById("msgLen").style.display = "block";
+            document.getElementById("msgReq").style.display = "none";
+        }
+        else {
+            document.getElementById("msgReq").style.display = "none";
+            document.getElementById("msgLen").style.display = "none";
+
+        }
+    }
+
+
+
+</script>
+
 
 </html>
 

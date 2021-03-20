@@ -208,6 +208,18 @@ body{
     font-family: "Raleway-Bold";
 
 }
+.formValid{
+    color: red; 
+    display: none; 
+    padding-top: .5rem;
+}
+
+
+
+
+
+
+
 .footerLast{
     text-align: center;
     justify-content: center;
@@ -244,14 +256,16 @@ body{
     height: 2rem;
     z-index: 99; 
     border:teal solid .3rem;
+    background: rgb(190, 190, 190,0);
     opacity: .3 ;
     cursor: pointer; 
-    padding: 15px; 
+    padding: 15px;
     border-radius: 100%;
   }
   
   #myBtn:hover {
     border: teal solid .3rem;
     opacity: 1 ;
+    
 
   }
