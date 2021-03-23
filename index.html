@@ -301,7 +301,7 @@
                         <div class="form-group">
 
                             <input type="text" class="form-control contactFormItem" placeholder="Enter name" name="name"
-                                id="name" required minlength="4" pattern="[a-zA-Z\s]*"
+                                id="name" required minlength="4" pattern="[a-zA-Z\s]*" oninput="nameValid();"
                                 onblur="nameValid();">
 
                             <span id="nameReq" class="formValid">Field
@@ -312,7 +312,7 @@
                                 characters
                                 required</span>
 
-                            <input type="email" class="form-control contactFormItem" placeholder="Enter email"
+                            <input type="email" class="form-control contactFormItem" placeholder="Enter email" oninput="emailValid();"
                                 name="email" id="email" required onblur="emailValid();">
 
                             <span id="emailReq" class="formValid">Field
@@ -322,7 +322,7 @@
 
 
                             <input type="text" class="form-control contactFormItem" placeholder="Enter subject"
-                                name="subject" id="subject" required minlength="10" onblur="subjectValid();">
+                                name="subject" id="subject" required minlength="10" onblur="subjectValid();" oninput="subjectValid();">
 
 
                             <span id="subReq" class="formValid">Field
@@ -334,7 +334,7 @@
 
                             <textarea class="form-control contactFormItem" placeholder="Your Message" name="message"
                              id="message" rows="5" required minlength="20"
-                                onblur="messageValid();"></textarea>
+                                onblur="messageValid();" oninput="messageValid();"></textarea>
 
                             <span id="msgReq" class="formValid">Field
                                 Required</span>
@@ -460,7 +460,7 @@
             document.getElementById("nameLen").style.display = "none";
 
         }
-        else if (text.length < 5) {
+        else if (text.length <= 4) {
             document.getElementById("nameLen").style.display = "block";
             document.getElementById("nameReq").style.display = "none";
             document.getElementById("nameErr").style.display = "none";
