@@ -226,6 +226,7 @@ body{
     padding: 5vh 0 5vh 0;
     background: #121920;
     color: #fff;
+    height: 100vh;
 }
 .footerItem{
     font-size: large;
